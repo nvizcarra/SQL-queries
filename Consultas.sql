@@ -19,3 +19,8 @@ FROM STATION;
 SELECT TOP 1 FirstName, DATALENGTH(FirstName) AS NAME_LENGTH 
 FROM Person.Person
 ORDER BY DATALENGTH(FirstName) ASC, FirstName	ASC;
+
+--Seleccionar el nombre más largo
+SELECT TOP 1 FirstName, DATALENGTH(FirstName) AS NAME_LENGTH 
+FROM Person.Person
+ORDER BY DATALENGTH(FirstName) DESC, FirstName	DESC;
