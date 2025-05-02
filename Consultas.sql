@@ -24,3 +24,12 @@ ORDER BY DATALENGTH(FirstName) ASC, FirstName	ASC;
 SELECT TOP 1 FirstName, DATALENGTH(FirstName) AS NAME_LENGTH 
 FROM Person.Person
 ORDER BY DATALENGTH(FirstName) DESC, FirstName	DESC;
+
+--Seleccionar registros que comiencen con vocales
+SELECT DISTINCT FirstName 
+FROM Person.Person
+WHERE FirstName LIKE 'A%'
+    OR FirstName LIKE 'E%'
+    OR FirstName LIKE 'I%'
+    OR FirstName LIKE 'O%'
+    OR FirstName LIKE 'U%';
