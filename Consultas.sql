@@ -33,3 +33,12 @@ WHERE FirstName LIKE 'A%'
     OR FirstName LIKE 'I%'
     OR FirstName LIKE 'O%'
     OR FirstName LIKE 'U%';
+
+--Seleccionar registros que terminen con vocales
+SELECT DISTINCT FirstName 
+FROM Person.Person
+WHERE FirstName LIKE '%A'
+    OR FirstName LIKE '%E'
+    OR FirstName LIKE '%I'
+    OR FirstName LIKE '%O'
+    OR FirstName LIKE '%U';
