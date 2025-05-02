@@ -14,3 +14,8 @@ FROM Person.Person;
 SELECT 
 	COUNT(CITY) - COUNT(DISTINCT CITY) AS CITY_ROWS_DIFFERENCE
 FROM STATION;
+
+--Seleccionar el nombre más corto
+SELECT TOP 1 FirstName, DATALENGTH(FirstName) AS NAME_LENGTH 
+FROM Person.Person
+ORDER BY DATALENGTH(FirstName) ASC, FirstName	ASC;
