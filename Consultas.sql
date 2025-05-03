@@ -42,3 +42,9 @@ WHERE FirstName LIKE '%A'
     OR FirstName LIKE '%I'
     OR FirstName LIKE '%O'
     OR FirstName LIKE '%U';
+
+--Seleccionar registros sin duplicados, que empiecen y terminen con vocales
+SELECT DISTINCT FirstName
+FROM Person.Person
+WHERE LOWER(LEFT(FirstName, 1)) IN ('a', 'e', 'i', 'o', 'u')
+  AND LOWER(RIGHT(FirstName, 1)) IN ('a', 'e', 'i', 'o', 'u');
